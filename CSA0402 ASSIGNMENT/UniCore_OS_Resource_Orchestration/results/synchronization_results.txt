@@ -1,0 +1,40 @@
+[16:13:02.129] ================================================================================
+[16:13:02.129] STARTING UNICORE FAIR READERS-WRITERS SYNCHRONIZATION SIMULATION
+[16:13:02.129] ================================================================================
+[16:13:02.159] [START_READ] Thread Reader-GradeCheck ENTERED -> (Active Readers: 1)
+[16:13:02.159] [READ_DATA]  Thread Reader-GradeCheck read STU_101: Student: Alice Vance | Score: 88.5 | Status: GRADED | v1
+[16:13:02.159] [START_READ] Thread Reader-Audit     ENTERED -> (Active Readers: 2)
+[16:13:02.159] [READ_DATA]  Thread Reader-Audit     read STU_104: Student: Diana Prince | Score: 82.5 | Status: IN_PROGRESS | v1
+[16:13:02.163] [WAIT_WRITE] Thread Writer-ScoreMod  WAITING EXCLUSIVE LOCK (Active Readers: 2, Active Writers: 0)
+[16:13:02.165] [WAIT_READ]  Thread Reader-Portal    waiting (Active Writers: 0, Waiting Writers: 1)
+[16:13:02.167] [WAIT_READ]  Thread Reader-Proctor2  waiting (Active Writers: 0, Waiting Writers: 1)
+[16:13:02.170] [WAIT_READ]  Thread Reader-Proctor1  waiting (Active Writers: 0, Waiting Writers: 1)
+[16:13:02.174] [WAIT_WRITE] Thread Writer-SubmitAns WAITING EXCLUSIVE LOCK (Active Readers: 2, Active Writers: 0)
+[16:13:02.179] [WAIT_READ]  Thread Reader-Analytics waiting (Active Writers: 0, Waiting Writers: 2)
+[16:13:02.190] [END_READ]   Thread Reader-Audit     EXITED  -> (Active Readers remaining: 1)
+[16:13:02.191] [WAIT_WRITE] Thread Writer-GraceMarks WAITING EXCLUSIVE LOCK (Active Readers: 1, Active Writers: 0)
+[16:13:02.200] [END_READ]   Thread Reader-GradeCheck EXITED  -> (Active Readers remaining: 0)
+[16:13:02.200] [START_WRITE]Thread Writer-ScoreMod  ACQUIRED EXCLUSIVE LOCK *** WRITING ***
+[16:13:02.200] [WRITE_DATA] Thread Writer-ScoreMod  updated STU_104: Score 82.5 -> 89.5, Status -> VERIFIED (v2)
+[16:13:02.270] [END_WRITE]  Thread Writer-ScoreMod  RELEASED EXCLUSIVE LOCK
+[16:13:02.270] [START_WRITE]Thread Writer-SubmitAns ACQUIRED EXCLUSIVE LOCK *** WRITING ***
+[16:13:02.270] [WRITE_DATA] Thread Writer-SubmitAns updated STU_102: Score 74.0 -> 92.0, Status -> GRADED (v2)
+[16:13:02.331] [END_WRITE]  Thread Writer-SubmitAns RELEASED EXCLUSIVE LOCK
+[16:13:02.331] [START_WRITE]Thread Writer-GraceMarks ACQUIRED EXCLUSIVE LOCK *** WRITING ***
+[16:13:02.331] [WRITE_DATA] Thread Writer-GraceMarks updated STU_105: Score 67.0 -> 75.0, Status -> VERIFIED (v2)
+[16:13:02.392] [END_WRITE]  Thread Writer-GraceMarks RELEASED EXCLUSIVE LOCK
+[16:13:02.392] [START_READ] Thread Reader-Portal    ENTERED -> (Active Readers: 1)
+[16:13:02.392] [READ_DATA]  Thread Reader-Portal    read STU_105: Student: Evan Wright | Score: 75.0 | Status: VERIFIED | v2
+[16:13:02.393] [START_READ] Thread Reader-Proctor1  ENTERED -> (Active Readers: 2)
+[16:13:02.393] [READ_DATA]  Thread Reader-Proctor1  read STU_101: Student: Alice Vance | Score: 88.5 | Status: GRADED | v1
+[16:13:02.393] [START_READ] Thread Reader-Analytics ENTERED -> (Active Readers: 3)
+[16:13:02.393] [READ_DATA]  Thread Reader-Analytics read STU_103: Student: Charlie Davis | Score: 91.0 | Status: VERIFIED | v1
+[16:13:02.393] [START_READ] Thread Reader-Proctor2  ENTERED -> (Active Readers: 4)
+[16:13:02.393] [READ_DATA]  Thread Reader-Proctor2  read STU_102: Student: Bob Martin | Score: 92.0 | Status: GRADED | v2
+[16:13:02.433] [END_READ]   Thread Reader-Portal    EXITED  -> (Active Readers remaining: 3)
+[16:13:02.434] [END_READ]   Thread Reader-Proctor2  EXITED  -> (Active Readers remaining: 2)
+[16:13:02.434] [END_READ]   Thread Reader-Proctor1  EXITED  -> (Active Readers remaining: 1)
+[16:13:02.444] [END_READ]   Thread Reader-Analytics EXITED  -> (Active Readers remaining: 0)
+[16:13:02.444] ================================================================================
+[16:13:02.444] SYNCHRONIZATION SIMULATION COMPLETED: ZERO RACE CONDITIONS DETECTED
+[16:13:02.444] ================================================================================

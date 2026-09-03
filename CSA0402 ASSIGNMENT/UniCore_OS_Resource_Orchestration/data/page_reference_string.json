@@ -1,0 +1,47 @@
+{
+    "standard_reference_string": [
+        7,
+        0,
+        1,
+        2,
+        0,
+        3,
+        0,
+        4,
+        2,
+        3,
+        0,
+        3,
+        2,
+        1,
+        2,
+        0,
+        1,
+        7,
+        0,
+        1
+    ],
+    "belady_reference_string": [
+        1,
+        2,
+        3,
+        4,
+        1,
+        2,
+        5,
+        1,
+        2,
+        3,
+        4,
+        5
+    ],
+    "evaluated_frame_counts": [
+        3,
+        4
+    ],
+    "hardware_config": {
+        "physical_ram_gb": 16,
+        "page_size_kb": 4,
+        "logical_address_space_mb": 64
+    }
+}

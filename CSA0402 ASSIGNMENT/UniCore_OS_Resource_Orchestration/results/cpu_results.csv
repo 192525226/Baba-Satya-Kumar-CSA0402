@@ -1,0 +1,41 @@
+Algorithm,Process ID,Process Name,Arrival Time (ms),Burst Time (ms),Priority,Completion Time (ms),Waiting Time (ms),Turnaround Time (ms),Response Time (ms)
+FCFS,P0,Online Examination Portal,0,8,1,8,0,8,0
+FCFS,P1,LMS Student Request,1,4,2,12,7,11,7
+FCFS,P2,Digital Library Search,2,9,3,21,10,19,10
+FCFS,P3,Research Computing Batch,3,5,4,26,18,23,18
+FCFS,P4,IoT Sensor Monitoring,4,2,1,28,22,24,22
+FCFS,P5,Automated Backup Service,5,6,5,34,23,29,23
+FCFS,P6,Faculty Grade Sync,6,3,2,37,28,31,28
+FCFS,P7,Video Stream Processing,7,7,4,44,30,37,30
+SJF (Non-Preemptive),P0,Online Examination Portal,0,8,1,8,0,8,0
+SJF (Non-Preemptive),P1,LMS Student Request,1,4,2,17,12,16,12
+SJF (Non-Preemptive),P2,Digital Library Search,2,9,3,44,33,42,33
+SJF (Non-Preemptive),P3,Research Computing Batch,3,5,4,22,14,19,14
+SJF (Non-Preemptive),P4,IoT Sensor Monitoring,4,2,1,10,4,6,4
+SJF (Non-Preemptive),P5,Automated Backup Service,5,6,5,28,17,23,17
+SJF (Non-Preemptive),P6,Faculty Grade Sync,6,3,2,13,4,7,4
+SJF (Non-Preemptive),P7,Video Stream Processing,7,7,4,35,21,28,21
+Round Robin (q=4),P0,Online Examination Portal,0,8,1,22,14,22,0
+Round Robin (q=4),P1,LMS Student Request,1,4,2,8,3,7,3
+Round Robin (q=4),P2,Digital Library Search,2,9,3,44,33,42,6
+Round Robin (q=4),P3,Research Computing Batch,3,5,4,38,30,35,9
+Round Robin (q=4),P4,IoT Sensor Monitoring,4,2,1,18,12,14,12
+Round Robin (q=4),P5,Automated Backup Service,5,6,5,40,29,35,17
+Round Robin (q=4),P6,Faculty Grade Sync,6,3,2,29,20,23,20
+Round Robin (q=4),P7,Video Stream Processing,7,7,4,43,29,36,22
+Preemptive Priority,P0,Online Examination Portal,0,8,1,8,0,8,0
+Preemptive Priority,P1,LMS Student Request,1,4,2,14,9,13,9
+Preemptive Priority,P2,Digital Library Search,2,9,3,26,15,24,15
+Preemptive Priority,P3,Research Computing Batch,3,5,4,31,23,28,23
+Preemptive Priority,P4,IoT Sensor Monitoring,4,2,1,10,4,6,4
+Preemptive Priority,P5,Automated Backup Service,5,6,5,44,33,39,33
+Preemptive Priority,P6,Faculty Grade Sync,6,3,2,17,8,11,8
+Preemptive Priority,P7,Video Stream Processing,7,7,4,38,24,31,24
+"MLFQ (q0=2, q1=4)",P0,Online Examination Portal,0,8,1,40,32,40,0
+"MLFQ (q0=2, q1=4)",P1,LMS Student Request,1,4,2,22,17,21,1
+"MLFQ (q0=2, q1=4)",P2,Digital Library Search,2,9,3,43,32,41,2
+"MLFQ (q0=2, q1=4)",P3,Research Computing Batch,3,5,4,29,21,26,3
+"MLFQ (q0=2, q1=4)",P4,IoT Sensor Monitoring,4,2,1,10,4,6,4
+"MLFQ (q0=2, q1=4)",P5,Automated Backup Service,5,6,5,33,22,28,5
+"MLFQ (q0=2, q1=4)",P6,Faculty Grade Sync,6,3,2,34,25,28,6
+"MLFQ (q0=2, q1=4)",P7,Video Stream Processing,7,7,4,44,30,37,7
